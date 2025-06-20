@@ -6,11 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard - Lazy Control</title>
   <link rel="stylesheet" href="style/style.css" />
+ <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+
+
 </head>
 
 <body>
+  <video id="input_video" autoplay playsinline style="display:none;"></video>
+<canvas id="output_canvas" width="1280" height="720" style="position:fixed; top:0; left:0; z-index:999;"></canvas>
+
   <section class="dashboard">
     <h1>Gaze Control Eye Dashboard👁️</h1>
+    
     <div class="grid-container">
       <a href="https://www.youtube.com" target="_blank" class="app-card">
         <img src="images/youtube-play.png" alt="YouTube" />
@@ -46,7 +55,10 @@
         <p>Shutdown</p>
       </a>
     </div>
+
   </section>
+  <script src="scripts/eyes.js"></script>
+
 </body>
 
 </html>
