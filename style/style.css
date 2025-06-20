@@ -54,9 +54,10 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 130vh;
-  overflow: hidden;
+  padding: 2rem 2rem;        /* Use padding instead of fixed height */
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -69,33 +70,35 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.2;
+  opacity: 1;
+ 
 }
 
 .hero-content {
   z-index: 1;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 100vw;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #00ffc3;
+  
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #eee;
   margin-bottom: 2rem;
 }
 
 .hero-content button#tryBtn {
   padding: 1rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   background: linear-gradient(90deg, #ff0055, #00ffc3);
   border: none;
   border-radius: 10px;
@@ -111,7 +114,7 @@ body {
 
 /* Sections (Features, Guide, Contact) */
 section {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background-color: #1a1a1a;
 }
 
@@ -129,10 +132,11 @@ section h2 {
   font-size: 2rem;
 }
 
+
 /* Dashboard Page */
 .dashboard {
   min-height: 100vh;
-  background: url('dashboard-bg.jpg') no-repeat center center/cover;
+ 
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -196,6 +200,173 @@ section h2 {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
 }
+
+/*
+yha se change ke
+*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #1f1f1f;
+  border: 1px solid rgba(0, 255, 195, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card h3 {
+  color: #00ffc3;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+}
+
+h2 {
+  color: #ff0055;
+  margin-bottom: 1rem;
+  text-align: center; /* <-- Center the headings */
+  font-size: 2rem;
+}
+
+.highlight {
+  color: #00ffc3;
+  font-weight: bold;
+}
+
+.separator {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: #00ffc3;
+  position: relative;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, #ff0055, #00ffc3);
+  vertical-align: middle;
+  margin: 0 1rem;
+  border-radius: 10px;
+}
+
+.separator-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffc3;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.separator-link:hover {
+  transform: scale(1.1);
+  color: #ff0055;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add scroll offset so it scrolls correctly below navbar */
+#tryBtn {
+  scroll-margin-top: 120px; /* adjust according to your navbar height */
+}
+
+.hero-animation {
+  margin: 2rem 0;
+}
+.hero-animation video {
+    width: 1000px;
+    height: 400px;
+    opacity: 8;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
+}
+.hero-video {
+  width: 100%;
+ 
+  max-width: 720px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+}
+
+
+.footer {
+  background-color: #121212;
+  color: #ccc;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid #00ffc3;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  color: #00ffc3;
+  margin-bottom: 1rem;
+}
+
+.footer .contact-info p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.footer .social-icons {
+  margin: 1.5rem 0;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+   font-size: 1.5rem;
+  color: #00ffc3;
+  transition: color 0.3s ease;
+}
+
+
+.footer .social-icons a:hover {
+  color: #ff0055;
+}
+
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #777;
+}
+
+.footer h3 {
+  color: #00ffc3;
+  margin-bottom: 1rem;
+  font-size: 1.8rem; /* Increased size */
+}
+
+.footer .contact-info p {
+  margin: 0.4rem 0;
+  font-size: 1.1rem; /* Slightly bigger text */
+}
 #gaze-dot {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }
@@ -205,6 +376,5 @@ section h2 {
 
 .app-card.highlight {
   outline: 5px solid #00ffcc;
-  border-radius: 10px;
+  border-radius: 10px;
 }
-

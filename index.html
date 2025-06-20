@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lazy Control</title>
-<link rel="stylesheet" href="style/style.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/style/style.css" />
+
+
+   <script src="gaze-control.js" defer></script>
 </head>
 <body>
 
@@ -13,60 +17,128 @@
   <nav class="navbar">
     <div class="logo">Lazy Control</div>
     <div class="nav-links">
-      <a href="home">Home</a>
+      <a href="index.html">Home</a>
       <a href="#features">Features</a>
       <a href="#guide">Guide</a>
       <a href="#contact">Contact</a>
+
+     
+
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    
-    <div class="hero-content">
-      <h1>Control Everything With Just Your Eyes</h1>
- <div class="hero-animation">
-      <video autoplay muted loop playsinline>
-        <source src="vedios/bg vedio.mov" type="video/mp4" />
-        
+ <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Control Everything With Just Your Eyes!</h1>
+
+    <div class="hero-animation">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="bg 3.mp4" type="video/mp4" />
       </video>
     </div>
-     <p>Welcome to <strong>Lazy Control</strong> – the future of hands-free computing. Using advanced AI-powered gaze tracking, you can now open apps, scroll pages, and control your laptop with nothing but your eyes and a blink. Say goodbye to keyboards and touchpads – just look, blink, and control. Designed for productivity, accessibility, and pure innovation. Experience the next-gen control that feels like magic. 👁️✨</p>
 
-      
-      <button id="tryBtn" onclick="location.href='dashboard.html'">Try It Yourself</button>
-    </div>
-  </section>
+    <p>
+      Welcome to <strong>Lazy Control</strong> – the future of hands-free computing.
+      Using advanced AI-powered gaze tracking, you can now open apps, scroll pages,
+      and control your laptop with nothing but your eyes and a blink. Say goodbye
+      to keyboards and touchpads – just look, blink, and control. Designed for
+      productivity, accessibility, and pure innovation. Experience the next-gen
+      control that feels like magic. 👁✨
+    </p>
+<button id="tryBtn" onclick="window.location.href='dashboard.html'">Try It Yourself</button>
+    
+  </div>
+</section>
 
   <!-- Features Section -->
-  <section id="features" class="features-section">
-    <div class="section-container">
-      <h2>🚀 Features</h2>
-      <ul>
-        <li>🎯 Gaze-controlled navigation</li>
-        <li>🔒 Blink to unlock</li>
-        <li>🎵 Control apps like YouTube, Music, Files etc.</li>
-        <li>🧠 Smart AI-assisted calibration</li>
-      </ul>
+  <section id="features" class="features">
+  <h2>🚀 Features</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>🧿 Gaze Navigation</h3>
+      <p>Move across apps using just <span class="highlight">eye movement</span> — totally hands-free.</p>
     </div>
-  </section>
-
-  <!-- Guide Section -->
-  <section id="guide" class="guide-section">
-    <div class="section-container">
-      <h2>📖 How It Works</h2>
-      <p>Using webcam feed and computer vision, Lazy Control detects your iris position and blink patterns. These actions are mapped to on-screen elements, letting you trigger apps and system actions seamlessly.</p>
+    <div class="card">
+      <h3>🤖 AI Precision</h3>
+      <p>Our ML model detects <span class="highlight">iris & blink</span> accurately for flawless interaction.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>📱 Custom Dashboard</h3>
+      <p>Navigate 8 essential apps like <span class="highlight">YouTube, Notes</span> & more through gaze.</p>
+    </div>
+    <div class="card">
+      <h3>🔐 Iris Authentication</h3>
+      <p>Unlock access via <span class="highlight">eye + blink</span>. No need to type passwords!</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Web Interface</h3>
+      <p>Use it right in your browser — no downloads, just <span class="highlight">instant access</span>.</p>
+    </div>
+    <div class="card">
+      <h3>⚙ Adaptive Calibration</h3>
+      <p>Automatic eye calibration ensures <span class="highlight">personalized control</span> per user.</p>
+    </div>
+    <div class="card">
+      <h3>🎯 Click via Blink</h3>
+      <p>A <span class="highlight">long blink</span> triggers a click. No keyboard, no mouse — just blink!</p>
+    </div>
+    <div class="card">
+      <h3>💡 Accessible Design</h3>
+      <p>Built for <span class="highlight">disabled & hands-free users</span> to empower interaction.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="section-container">
-      <h2>📬 Contact Us</h2>
+<div class="separator">
+  <a href="#tryBtn" class="separator-link">🚀 Ready to Try?</a>
+</div>
+
+
+
+<!-- GUIDE SECTION -->
+<section id="guide" class="guide">
+  <h2>🛠 How to Use</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>🔓 Step 1: Launch App</h3>
+      <p>Open <span class="highlight">Lazy Control</span> and grant access to your webcam.</p>
+    </div>
+    <div class="card">
+      <h3>🎯 Step 2: Calibrate</h3>
+      <p>The system tracks your eyes — follow the moving <span class="highlight">dots</span> to calibrate.</p>
+    </div>
+    <div class="card">
+      <h3>🧿 Step 3: Gaze to Control</h3>
+      <p>Move your eyes to <span class="highlight">select, scroll, and navigate</span> the interface.</p>
+    </div>
+    <div class="card">
+      <h3>👁‍🗨 Step 4: Click via Blink</h3>
+      <p>Want to click? Just give a <span class="highlight">long blink</span>. That's it!</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-content">
+    <div class="contact-info">
+      <h3>📬 Contact Us</h3>
       <p>Email: support@lazycontrol.ai</p>
-      <p>Phone: +91-95885-73399</p>
+      <p>Phone: ‪+91-95885-73399‬</p>
     </div>
-  </section>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p class="footer-copy">© 2025 Lazy Control. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+ 
 
 </body>
 </html>
